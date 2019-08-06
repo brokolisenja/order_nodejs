@@ -1,0 +1,33 @@
+Give example for code smell (1 example) which very common in OOP. Explain why, and give
+scenario how to avoid.
+
+var User = require('./user');
+
+function getTeam(teamId) {
+  return User.find({teamId: teamId});
+}
+
+module.exports.getTeam = getTeam;
+
+
+var Team = require('./team');
+var User = require('./user');
+
+describe('Team', function() {
+  it('#getTeam', function* () {
+    var users = [{id: 1, id: 2}];
+
+    this.sandbox.stub(User, 'find', function() {
+      return Promise.resolve(users);
+    });
+
+    var team = yield team.getTeam();
+
+    expect(team).to.eql(users);
+  });
+});
+
+
+2.
+a. GET untuk membaca resource pada rest server
+b. POST mengirimkan data pada body biasanya menggunakan JSON/XML dll untuk mengakses rest server
