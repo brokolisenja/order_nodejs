@@ -27,6 +27,7 @@ describe('Team', function() {
   });
 });
 
+clean code
 
 2.
 a. GET untuk membaca resource pada rest server
