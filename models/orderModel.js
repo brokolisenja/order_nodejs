@@ -14,7 +14,7 @@ const orderProduct = async (data, jwt) => {
                 cust_id: jwt.data.user_id,
                 product_id: data.product_id,
                 merchant_id: data.merchant_id,
-                reward: parseInt(data.price) > 10000 ? 1 : 2,
+                reward: parseInt(data.price) < 50000 ? 1 : 2,
                 qty: data.qty,
                 created_at: knex.fn.now(),
             };

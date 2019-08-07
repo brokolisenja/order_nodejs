@@ -11,4 +11,4 @@
 - AUTH with JWT
 - Merchant Create, Update, Delete Product -> product_name, price, qty (role = 2)
 - Merchant read customer by product merchant
-- Curstomer Order product get point if( price > 10000) get reward = 1 else get reward 2
+- Curstomer Order product get point if( price < 50000) get reward = 1 else get reward 2
